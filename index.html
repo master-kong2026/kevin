@@ -889,6 +889,15 @@ function drawScore(){
 
 function drawMenu(){
   const w=canvas.width,h=canvas.height,cx=w/2,cy=h/2;
+  // 左上角楷楷智作 logo
+  ctx.save();
+  ctx.fillStyle='#fff';
+  ctx.font='bold 18px "Segoe UI","Microsoft YaHei",sans-serif';
+  ctx.textAlign='left';ctx.textBaseline='top';
+  ctx.shadowColor='rgba(0,0,0,0.8)';ctx.shadowBlur=6;
+  ctx.fillText('楷楷智作',18,16);
+  ctx.shadowBlur=0;
+  ctx.restore();
   ctx.save();ctx.shadowColor='#aa44ee';ctx.shadowBlur=30;ctx.fillStyle='#bb55ff';
   ctx.font=`bold ${Math.min(w*0.08,72)}px "Segoe UI","Microsoft YaHei",sans-serif`;ctx.textAlign='center';ctx.textBaseline='middle';
   ctx.fillText('几何冲刺',cx,cy-100);ctx.shadowBlur=0;
